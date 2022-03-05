@@ -17,7 +17,7 @@ const SingleItem = () => {
   const [item, setItem] = useState({})
   
   useEffect(() => {
-    fetch(`http://localhost:5000/singleItem/${itemId}`)
+    fetch(`https://serene-earth-71379.herokuapp.com/${itemId}`)
       .then((res) => res.json())
       .then((data) => setItem(data))
   }, [])
@@ -46,7 +46,7 @@ const SingleItem = () => {
     // const response = confirm('are you sure to proceed?')
     if (confirmBox === true) {
       //  fetch('http://haunted-hollow-48244.herokuapp.com/singleItem/orders', {
-      fetch('http://localhost:5000/orders', {
+      fetch('https://serene-earth-71379.herokuapp.com/orders', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(got),

@@ -17,7 +17,7 @@ const Home = () => {
   // const { show } = Review()
   // const {show} = Show()
   useEffect(() => {
-    fetch('http://localhost:5000/allEvents')
+    fetch('https://serene-earth-71379.herokuapp.com/allEvents')
       .then((res) => res.json())
       .then((data) => setEvent(data))
   }, [])

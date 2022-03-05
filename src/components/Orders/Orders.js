@@ -9,8 +9,7 @@ const Orders = () => {
   const { token } = useAuth()
 
   useEffect(() => {
-    fetch('http://localhost:5000/orders')
-      //  fetch('https://localhost:5000/orders')
+    fetch('https://serene-earth-71379.herokuapp.com/orders')
       .then((res) => res.json())
       .then((data) => setOrder(data))
   }, [])
@@ -20,7 +19,7 @@ const Orders = () => {
   const handleDeleteUser = (id) => {
     // const confirmBox = window.confirm('Are you sure you want to delete?')
     // if (confirmBox === true) {
-    fetch(`https://haunted-hollow-48244.herokuapp.com/orders/${id}`, {
+    fetch(`https://serene-earth-71379.herokuapp.com/orders/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

@@ -8,8 +8,7 @@ import './MyOrders.css'
 const MyOrders = () => {
   // const { user } = useFirebase();
   // const [events, setEvents] = useState([]);
-  //   fetch("http://localhost:5000/addEvent", {
-  //   //   method: "POST",
+
   //   //   headers: { "content-type": "application/json" },
   //   //   body: JSON.stringify(data),
   //   // })
@@ -21,16 +20,14 @@ const MyOrders = () => {
   const [order, setOrder] = useState([])
 
   useEffect(() => {
-    // fetch(`http://localhost:5000/orders/${myUser}`)
-    // fetch(`https://haunted-hollow-48244.herokuapp.com/orders/${user?.email}`)/haunted-hollow-48244.herokuapp.com
-    fetch(`https://haunted-hollow-48244.herokuapp.com/orders/${user?.email}`)
+    
+    fetch(`https://serene-earth-71379.herokuapp.com/orders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setEvents(data))
   }, [user?.email])
 
   const handleDelete = (id) => {
-    // fetch(`https://haunted-hollow-48244.herokuapp.com/deleteOrder/${id}`, {
-    fetch(`https://haunted-hollow-48244.herokuapp.com/deleteOrder/${id}`, {
+    fetch(`https://serene-earth-71379.herokuapp.com/deleteOrder/${id}`, {
       method: 'DELETE',
       headers: { 'content-type': 'application/json' },
     })
