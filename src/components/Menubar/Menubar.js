@@ -27,7 +27,6 @@ const Menubar = () => {
           </button>
           <div className='collapse navbar-collapse' id='navbarSupportedContent'>
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-
               <li className='nav-item p-2 nav-link active'>
                 <Link className='nav-link p-2' to='/'>
                   Home
@@ -114,6 +113,9 @@ const Menubar = () => {
                   <button className='items btn btn-info p-1 '>Login</button>
                 </Link>
               )}
+              <Link className='nav-link' to='/admin'>
+                <li className=''>{user?.email}</li>
+              </Link>
               {/* <Link className='nav-link' to='/admin'>
                 <li className=''>{user?.email}</li>
               </Link> */}
